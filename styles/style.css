@@ -13,7 +13,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font-family);
+  font-family: var(--main-font-family), "Arial", sans-serif;
   font-variation-settings: "wght" var(--main-text-weight);
   background-image: var(--background-gradient);
   background-size: cover;
@@ -37,7 +37,7 @@
 
 .header__card {
   padding-block: var(--card-header-padding-block);
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), "Comic Sans MS", fantasy;
   display: grid;
   justify-items: center;
   gap: 20px;
@@ -73,37 +73,40 @@
 .img__container {
   position: relative;
   width: 100%;
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  margin: 0;
 }
 
-.img__zero {
+.filter-multiple {
   filter: saturate(180%) brightness(60%) sepia(0.6);
 }
 
-.img__first-start {
+.filter-saturate {
   filter: saturate(180%);
 }
 
-.img__first-end {
+.filter-contrast {
   filter: contrast(170%);
 }
 
-.img__second-start {
+.filter-grayscale {
   filter: grayscale(70%);
 }
 
-.img__second-end {
+.filter-hue-rotate {
   filter: hue-rotate(0.9turn);
 }
 
-.img__third-start {
+.filter-saturate-dark {
   filter: brightness(50%) saturate(180%);
 }
 
-.img__third-end {
+.filter-sepia {
   filter: sepia(0.6);
 }
 
-.img__present {
+.filter-invert {
   filter: invert(1);
 }
 
@@ -111,7 +114,7 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  font-family: var(--accent-font-family);
+   font-family: var(--accent-font-family), "Comic Sans MS", fantasy;
   font-size: var(--button-font-size);
   mix-blend-mode: hard-light;
   opacity: 0.5;
@@ -154,7 +157,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 12px;
+  gap: 7px;
   padding-right: 25px;
   padding-bottom: 25px;
 }
@@ -166,7 +169,7 @@
 
 .button__text {
   position: relative;
-  font-family: var(--accent-font-family);
+   font-family: var(--accent-font-family), "Comic Sans MS", fantasy;
   font-size: var(--button-font-size);
   z-index: 1;
   color: var(--text-color-hover);
@@ -174,29 +177,33 @@
 }
 
 .button__save {
-  width: 355px;
+  width: max-content;
   height: 55px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  padding: 17px 20px;
 }
 
 .dialog__popup {
-  padding: 30px;
   border: 2px solid var(--accent-color);
+  width: 353px;
+  height: 191px;
+  padding: 30px;
+  overflow: hidden;
 }
 
 .dialog__popup[open] {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 30px;
-  width: 353px;
 }
 
 .popup__text {
-  font-family: var(--accent-font-family);
+   font-family: var(--accent-font-family), "Comic Sans MS", fantasy;
   font-size: var(--button-font-size);
   max-width: 234px;
   text-transform: uppercase;
@@ -211,8 +218,13 @@
 }
 
 .popup__button {
-  min-width: 100%;
+  min-width: 293px;
   min-height: 38px;
+}
+
+.button__text-popup {
+  text-transform: uppercase;
+  line-height: 90%;
 }
 
 .dialog__popup::backdrop {
@@ -264,14 +276,13 @@
 .card__icon-button {
   display: flex;
   align-items: center;
-  justify-self: center;
+  justify-content: center;
   background-color: transparent;
   padding: 0;
   outline: none;
   cursor: pointer;
   border: 2px solid transparent;
   transition: border 0.3s ease;
-  width: 38px;
   height: 38px;
 }
 
@@ -330,7 +341,7 @@
   transition: fill 0.3s linear 0.06s;
 }
 
-.like-icon {
+.like-icon .heart {
   transform-origin: center;
 }
 
@@ -348,7 +359,6 @@
   }
 
   .button__save {
-    width: 306px;
     height: 84px;
     flex-direction: column;
   }
@@ -359,11 +369,17 @@
   }
 
   .dialog__popup {
+    width: 100%;
+    max-width: 341px;
     padding-right: 40px;
     padding-left: 40px;
   }
 
-  .dialog__popup[open] {
-    width: 341px;
+  .popup__text {
+    min-width: 234px;
+  }
+
+  .popup__button {
+    min-width: 261px;
   }
 }

@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
+    <link rel="icon" href="./images/favicon.ico" sizes="any">
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -13,7 +16,10 @@
   <body class="page">
     <header class="header">
       <div class="header__card card">
-        <h1 class="header__title">&lt;/HTML&gt;</h1>
+        <h1 class="header__title">
+          <a class="header__logo-link" href="#">&lt;/HTML&gt;
+          </a>
+        </h1>
         <p class="header__subtitle">закрывающий тег</p>
       </div>
     </header>
@@ -22,14 +28,14 @@
         <h2 class="card__title">
           Фритрек и нулевой спринт: Подготовка к работе
         </h2>
-        <div class="img__container">
+        <figure class="img__container">
           <img
-            class="card__img img__zero"
+            class="card__img filter-multiple"
             src="./images/image1.jpg"
             alt="Крупный план милого кота с большими глазами, который смотрит прямо в камеру"
           />
-          <span class="card__label">&lt;/HTML&gt;</span>
-        </div>
+          <figcaption class="card__label">&lt;/HTML&gt;</figcaption>
+        </figure>
         <div class="card__text-content">
           <p class="card__text">
             Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.
@@ -39,8 +45,9 @@
           </p>
         </div>
         <div class="card__buttons">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Лайк">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="39"
               height="36"
@@ -72,21 +79,21 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
         <h2 class="card__title">1 спринт: Я — чистый лист</h2>
-        <div class="img__container">
+        <figure class="img__container">
           <img
-            class="card__img img__first-start"
+            class="card__img filter-saturate"
             src="./images/image2.jpg"
             alt="Рыжий котенок сидит перед клавиатурой и растерянно смотрит на неё. Снизу надпись: хоспаде, куда я жмав"
           />
-          <span class="card__label">&lt;/HTML&gt;</span>
-        </div>
+          <figcaption class="card__label">&lt;/HTML&gt;</figcaption>
+        </figure>
         <div class="card__text-content">
           <p class="card__text">
             На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички. Один из них — страх перед чистым листом. Это, за этим ощущением скрываются более глубокие вопросы: с чего начать? а вдруг будет слишком сложно? что, если я не справлюсь?
@@ -96,8 +103,9 @@
           </p>
         </div>
         <div class="card__buttons">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Лайк">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="39"
               height="36"
@@ -129,21 +137,21 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
         <h2 class="card__title">1 спринт: А если не получится?</h2>
-        <div class="img__container">
+        <figure class="img__container">
           <img
-            class="card__img img__first-end"
+            class="card__img filter-contrast"
             src="./images/image3.jpg"
             alt="Маленький серо-белый котенок сидит на офисном стуле за столом и держит лапы на клавиатуре и мыши перед старым монитором"
           />
-          <span class="card__label">&lt;/HTML&gt;</span>
-        </div>
+          <figcaption class="card__label">&lt;/HTML&gt;</figcaption>
+        </figure>
         <div class="card__text-content">
           <p class="card__text">
             Первый проект — позади! Но это всё ещё самое начало пути. Радость могла быстро померкнуть и смениться ожиданием провала. Или вы,наоборот, могли вдохновиться успехами и поверить в себя.
@@ -153,8 +161,9 @@
           </p>
         </div>
         <div class="card__buttons">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Лайк">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="39"
               height="36"
@@ -186,21 +195,21 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
         <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
-        <div class="img__container">
+        <figure class="img__container">
           <img
-            class="card__img img__second-start"
+            class="card__img filter-grayscale"
             src="./images/image4.jpg"
             alt="Черно-белое фото полосатого кота, лежащего лапой на ноутбуке, на экране которого открыт редактор кода"
           />
-          <span class="card__label">&lt;/HTML&gt;</span>
-        </div>
+          <figcaption class="card__label">&lt;/HTML&gt;</figcaption>
+        </figure>
         <div class="card__text-content">
           <p class="card__text">
             На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы понять, как много ещё впереди. Вы могли попытаться погнаться за идеалом и понять, что он недостижим. А, может, вы вовсе и не подвержены перфекционизму и вместо того, чтобы сделать идеально, старались просто сделать.
@@ -210,8 +219,9 @@
           </p>
         </div>
         <div class="card__buttons">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Лайк">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="39"
               height="36"
@@ -243,21 +253,21 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
         <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
-        <div class="img__container">
+        <figure class="img__container">
           <img
-            class="card__img img__second-end"
+            class="card__img filter-hue-rotate"
             src="./images/image5.jpg"
             alt="Шесть разных пушистых котов одновременно сидят на многоярусном игровом комплексе и смотрят в объектив"
           />
-          <span class="card__label">&lt;/HTML&gt;</span>
-        </div>
+          <figcaption class="card__label">&lt;/HTML&gt;</figcaption>
+        </figure>
         <div class="card__text-content">
           <p class="card__text">
             Всё это время вы были не одиноки (хотя, возможно, иногда и
@@ -265,12 +275,13 @@
             одногруппники, команда сопровождения и просто близкие люди, которым можно пожаловаться, если очередной макет просто так не поддавался. Осваивать что-то новое легче, когда рядом есть единомышленники, не правда ли?
           </p>
           <p class="card__text">
-            В процессе учебы моей главной командой поддержки стали моя семья и мой кот Тима. Приятно осознавать, что пока ты борешься со сеткой или уехавшим каскадом, рядом всегда есть те, кто отвлечет, принесет чай или просто помурчит на  соседнем кресле.
+            В процессе учебы моей главной командой поддержки стали моя семья и мой кот Тима. Приятно осознавать, что пока ты борешься с сеткой или уехавшим каскадом, рядом всегда есть те, кто отвлечет, принесет чай или просто помурчит на  соседнем кресле.
           </p>
         </div>
         <div class="card__buttons">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Лайк">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="39"
               height="36"
@@ -302,21 +313,21 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
         <h2 class="card__title">3 спринт: Обходные стратегии</h2>
-        <div class="img__container">
+        <figure class="img__container">
           <img
-            class="card__img img__third-start"
+            class="card__img filter-saturate-dark"
             src="./images/image6.jpg"
             alt="Кот в круглых очках и красном галстуке-бабочке сидит перед открытым ноутбуком с растерянным выражением мордочки"
           />
-          <span class="card__label">&lt;/HTML&gt;</span>
-        </div>
+          <figcaption class="card__label">&lt;/HTML&gt;</figcaption>
+        </figure>
         <div class="card__text-content">
           <p class="card__text">
             На этом курсе вы постоянно решали разные задачи. В какой-то момент вам могло показаться, что решения просто иссякли. Значит, пришло время посмотреть на задачу под другим углом.
@@ -326,8 +337,9 @@
           </p>
         </div>
         <div class="card__buttons">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Лайк">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="39"
               height="36"
@@ -359,21 +371,21 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
         <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
-        <div class="img__container">
+        <figure class="img__container">
           <img
-            class="card__img img__third-end"
+            class="card__img filter-sepia"
             src="./images/image7.png"
             alt="Мем с белым котом за компьютером о панике перед дедлайном, когда на задачу был дан целый месяц"
           />
-          <span class="card__label">&lt;/HTML&gt;</span>
-        </div>
+          <figcaption class="card__label">&lt;/HTML&gt;</figcaption>
+        </figure>
         <div class="card__text-content">
           <p class="card__text">
             Во время учёбы часто возникает чувство, когда не знаешь, за что
@@ -387,8 +399,9 @@
           </p>
         </div>
         <div class="card__buttons">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Лайк">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="39"
               height="36"
@@ -420,21 +433,21 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
         <h2 class="card__title">«Сейчас я здесь»</h2>
-        <div class="img__container">
+        <figure class="img__container">
           <img
-            class="card__img img__present"
+            class="card__img filter-invert"
             src="./images/image8.jpg"
             alt="Укутанный в плед кот в очках, который сидит на диване перед ноутбуком рядом с чашкой кофе"
           />
-          <span class="card__label">&lt;/HTML&gt;</span>
-        </div>
+          <figcaption class="card__label">&lt;/HTML&gt;</figcaption>
+        </figure>
         <div class="card__text-content">
           <p class="card__text">
             Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё много материала про «красотищу». Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И этот мир постоянно меняется. Познать его полностью не получится, но это тот случай, когда важен сам процесс познания. Ведь часто путь — и есть результат.
@@ -444,8 +457,9 @@
           </p>
         </div>
         <div class="card__buttons">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Лайк">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="39"
               height="36"
@@ -477,7 +491,7 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -517,7 +531,7 @@
         type="button"
         onclick="window['popup'].close()"
       >
-        <span class="button__text">ок</span>
+        <span class="button__text button__text-popup">ок</span>
       </button>
     </dialog>
   </body>
