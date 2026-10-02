@@ -36,15 +36,21 @@
 }
 
 .header__card {
-  padding-block: var(--card-header-padding-block);
+  min-height: var(--card-header-padding-block);
   font-family: var(--accent-font-family), "Comic Sans MS", fantasy;
-  display: grid;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
 .header__title {
   font-size: var(--accent-title-font-size);
+}
+
+.header__logo-link {
+  text-decoration: none;
 }
 
 .header__subtitle {
@@ -114,7 +120,7 @@
   position: absolute;
   top: 25px;
   right: 25px;
-   font-family: var(--accent-font-family), "Comic Sans MS", fantasy;
+  font-family: var(--accent-font-family), "Comic Sans MS", fantasy;
   font-size: var(--button-font-size);
   mix-blend-mode: hard-light;
   opacity: 0.5;
@@ -151,6 +157,8 @@
 .card__text {
   font-size: var(--main-font-size);
   line-height: 21px;
+  width: 100%;
+  max-width: 646px;
 }
 
 .card__buttons {
@@ -169,7 +177,7 @@
 
 .button__text {
   position: relative;
-   font-family: var(--accent-font-family), "Comic Sans MS", fantasy;
+  font-family: var(--accent-font-family), "Comic Sans MS", fantasy;
   font-size: var(--button-font-size);
   z-index: 1;
   color: var(--text-color-hover);
@@ -177,7 +185,8 @@
 }
 
 .button__save {
-  width: max-content;
+  box-sizing: border-box;
+  width: auto;
   height: 55px;
   display: flex;
   flex-direction: row;
@@ -203,7 +212,7 @@
 }
 
 .popup__text {
-   font-family: var(--accent-font-family), "Comic Sans MS", fantasy;
+  font-family: var(--accent-font-family), "Comic Sans MS", fantasy;
   font-size: var(--button-font-size);
   max-width: 234px;
   text-transform: uppercase;
@@ -358,6 +367,11 @@
     margin-bottom: 100px;
   }
 
+  .card__text {
+    width: 100%;
+    max-width: 321px;
+  }
+
   .button__save {
     height: 84px;
     flex-direction: column;
@@ -366,6 +380,7 @@
   .save__img {
     width: 28px;
     height: 28px;
+    flex-shrink: 0;
   }
 
   .dialog__popup {
@@ -376,7 +391,7 @@
   }
 
   .popup__text {
-    min-width: 234px;
+    max-width: 100%;
   }
 
   .popup__button {
